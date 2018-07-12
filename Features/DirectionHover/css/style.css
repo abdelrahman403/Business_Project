@@ -1,0 +1,64 @@
+.gallery .container {
+	width: 1120px;
+}
+.da-thumbs {
+	list-style: none;
+	width: 984px;
+	height: 600px;
+	position: relative;
+	margin: 20px auto;
+	padding: 0;
+}
+.da-thumbs li {
+	display: inline-block;
+	position: relative;
+	float: left;
+	width: 33.333333%;
+	height: 370px;
+	padding: 0 8px;
+	margin: 8px 0;
+}
+.da-thumbs li .img-container,
+.da-thumbs li .img-container img {
+	display: block;
+	position: relative;
+}
+.da-thumbs li .img-container {
+	width: 100%;
+	height: 100%;
+	cursor: crosshair;
+	overflow: hidden;
+}
+.da-thumbs li .img-container img {
+	width: 100%;
+	height: 100%;
+	transition: transform .8s;
+}
+.da-thumbs li .img-container:hover img { transform: scale3d(1.1,1.1,1); }
+
+.da-thumbs li .img-container .overlay {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+}
+.da-thumbs li .img-container .overlay-content .type,
+.da-thumbs li .img-container .overlay-content .name	
+{
+	display: block;
+	position: absolute;
+	top: 75%;
+	left: 5%;
+	color: #fff;
+	letter-spacing: .8px;
+}
+.da-thumbs li .img-container .overlay-content .type {
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.da-thumbs li .img-container .overlay-content .name	{ 
+	top: 82%;
+	font-size: 17px;
+	text-transform: capitalize;
+}
+

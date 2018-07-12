@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Direction-Aware Hover Effect with CSS3 and jQuery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Direction-Aware Hover Effect with CSS3 and jQuery" />
+        <meta name="keywords" content="hover, css3, jquery, effect, direction, aware, depending, thumbnails" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="js/modernizr.custom.97074.js"></script>
+		<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css"/></noscript>
+    </head>
+    <body>
+		<!-- Codrops top bar -->
+		<div class="codrops-top clearfix">
+			<a href="http://tympanus.net/Tutorials/SlideshowJmpress/">
+				<strong>&laquo; Previous Demo: </strong>Slideshow with jmpress.js
+			</a>
+			<span class="right">
+				<a href="http://tympanus.net/codrops/2012/04/09/direction-aware-hover-effect-with-css3-and-jquery/">
+					<strong>Back to the Codrops Article</strong>
+				</a>
+			</span>
+		</div><!--/ Codrops top bar -->
+		<header class="clearfix">
+			<span>Tips &amp; Tricks</span>
+			<h1>Direction-Aware <span>Hover Effect</span></h1>
+			<nav class="codrops-demos">
+				<a href="index.html">Default</a>
+				<a class="current-demo" href="index2.html">Delay</a>
+				<a href="index3.html">Inverse</a>
+			</nav>
+			<p>We add a little hover delay so that we don't see the info box slide in immediately.</p>
+		</header>
+		<section class="gallery">
+			<div class="container">
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div class="overlay">
+								<div class="overlay-content">
+									<span class="type">website</span>
+									<span class="name">mobile mockup</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div class="overlay">
+								<div class="overlay-content">
+									<span class="type">website</span>
+									<span class="name">mobile mockup</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div class="overlay">
+								<div class="overlay-content">
+									<span class="type">website</span>
+									<span class="name">mobile mockup</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div class="overlay">
+								<div class="overlay-content">
+									<span class="type">website</span>
+									<span class="name">mobile mockup</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div class="overlay">
+								<div class="overlay-content">
+									<span class="type">website</span>
+									<span class="name">mobile mockup</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div class="overlay">
+								<div class="overlay-content">
+									<span class="type">website</span>
+									<span class="name">mobile mockup</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div><span><i class="ion-plus-round icon"></i></span></div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div><span><i class="ion-plus-round icon"></i></span></div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div><span><i class="ion-plus-round icon"></i></span></div>
+						</a>
+					</li>
+					<li>	
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div><span><i class="ion-plus-round icon"></i></span></div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div><span><i class="ion-plus-round icon"></i></span></div>
+						</a>
+					</li>
+					<li>
+						<a href="#portfolio" class="img-container">
+							<img src="images/portfolio/work1.jpg" alt="project1">
+							<div><span><i class="ion-plus-round icon"></i></span></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+		<script type="text/javascript">
+			$(function() {
+
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir({
+					hoverDelay : 85
+				}); } );
+
+			});
+		</script>
+    </body>
+</html>

@@ -1,0 +1,314 @@
+/* ********** start main rules ********** */
+
+* {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,html {
+	height: 5000px;
+	font-family: 'Open Sans', sans-serif;
+}
+a, a:hover, a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+/* ********** end main rules ********** */
+
+/* ********** start my framework ********** */
+
+/*
+.roboto-font {
+	font-family: 'Roboto', sans-serif;
+}
+*/
+.heading-font {
+	font-family: 'Poppins', sans-serif;
+}
+.open-sans-font {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.paragraph {
+	font-size: 15px;
+	color: #999;
+	line-height: 1.8;
+}
+.normal-font {
+	font-weight: normal;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.bold {
+	font-weight: bold;
+}
+
+/*
+	> center vertically
+*/
+.center-vertical {
+	height: 100%;
+	overflow: hidden;
+}
+.center-vertical:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	width: 1px;
+	vertical-align: middle;
+}
+.center-vertical-content {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+/* flex center */
+.center-flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+/*
+	> title border bottom Components
+*/
+
+.title-border-long {
+	display: inline-block;
+	height: 2px;
+	width: 80px;
+	background-color: #337ab7;
+	position: relative;
+    top: 0;
+    left: 0;
+}
+.title-border-long:before {
+	content: '';
+	display: inline-block;
+	height: 1px;
+	width: 80px;
+	background-color: #ccc;
+	position: absolute;
+	top: 1px;
+	right: 83px;
+/*	left: 40.6%;*/
+}
+.title-border-long:after {
+	content: '';
+	display: inline-block;
+	height: 1px;
+	width: 80px;
+	background-color: #ccc;
+	position: absolute;
+	top: 1px;
+	left: 83px;
+/*	left: 53.5%;*/
+}
+
+.our-services .title-border-long:before { width: 50px; }
+.our-services .title-border-long:after { width: 50px; }
+
+.title-border-small {
+	display: inline-block;
+	height: 6px;
+	background-color: #337ab7;
+	width: 40px;
+	position: absolute;
+    left: 50%;
+    top: -2px;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.section-header:hover .title-border-small { width: 80px; }
+
+
+@media(max-width: 767px) {
+	.title-border-long:before { height: 0; }
+	.title-border-long:after { height: 0; }
+}
+
+
+/*
+	> Button Components
+*/
+
+.custom-btn {
+	display: inline-block;
+	position: absolute;
+	background: transparent;
+	color: #fff;
+	width: 215px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	margin-top: 20px;
+	border: 1px solid rgba(255, 255, 255, .7);
+	overflow: hidden;
+	font-size: 15px;
+	font-weight: 400;
+}
+.custom-btn:before {
+	content: attr(data-title);
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 215px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	background: #fff;
+	color: #333;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.custom-btn:after {
+	content: attr(data-title);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 215px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	background: transparent;
+	color: #fff;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.custom-btn:hover {
+	border-right: 1px solid #fff;
+}
+.custom-btn:hover:before {
+	left: 0;
+}
+.custom-btn:hover:after {
+	top: 100%;
+}
+
+@media (max-width: 991px) {
+	.custom-btn {
+		width: 180px;
+		height: 48px;
+		line-height: 48px;
+		font-size: 14px;
+	}
+	.custom-btn:before {
+		width: 180px;
+		height: 48px;
+		line-height: 48px;
+	}
+	.custom-btn:after {
+		width: 180px;
+		height: 48px;
+		line-height: 48px;
+	}
+}
+
+/* ********** end my framework ********** */
+
+
+/* 
+	************* all sectoins **************
+*/
+
+.section-header {
+	padding-bottom: 20px;
+}
+.section-header .title-head {
+	font-size: 31px;
+	letter-spacing: .8px;
+}
+
+/*** venobox overriding ***/
+.vbox-close {
+	font-size: 42px;
+	font-weight: bold;
+	top: 10px;
+	right: 60px;
+	height: 55px;
+}
+.vbox-close:hover {
+	color: #9D2E3E;
+}
+
+/* ********** start our-services section ********** */
+
+.our-services {
+	padding-top: 60px;
+	padding-bottom: 70px;
+	background-color: #f8f8f8;
+}
+.our-services .section-header { margin-bottom: 35px; }
+.our-services .title-head span { letter-spacing: -1px; }
+
+
+.our-services .service-container .service {
+	background-color: #fff;
+	border: 1px solid #eee;
+/*	border-top:2px solid #337ab7; */
+	border-radius: 3px 3px 3px 3px;
+	padding: 15px;
+	text-align: center;
+	color: #555;
+	padding-bottom: 30px;
+	-webkit-box-shadow: 1px 1px 5px #ccc;
+	box-shadow: 1px 1px 5px #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+/*
+.our-services .service-container:hover .service {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+*/
+.our-services .service-container .service .icon-container {
+	display: inline-block;
+	padding: 0 18px;
+	border: 1px solid #eee;
+	border-radius: 50%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	-webkit-box-shadow: 0 0 0 5px rgba(238, 238, 238, .5);
+	box-shadow: 0 0 0 5px rgba(238, 238, 238, .5); 
+}
+.our-services .service-container .service .icon {
+	font-size: 50px;
+	color: #337ab7;
+}
+.our-services .service-container .service .fa-rocket {
+	margin: 11px 0;
+}
+.our-services .service-container .service-head {
+	background-color: #fff;
+	width: 80%;
+	margin: auto;
+	padding: 10px;
+	border: 1px solid #eee;
+	border-top: 0;
+	text-transform: capitalize;
+}
+.our-services .second-row { margin-top: 30px; }
+
+
+/* ********** end our-services section ********** */
+

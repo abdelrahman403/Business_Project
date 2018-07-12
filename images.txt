@@ -1,0 +1,8 @@
+rosseta-wordpress
+lambada-html-corporate,wedding(team)
+pillar-html
+porto-html-clients only
+resume-html
+vrcard-html-portfolio, patterns only
+friendfinderhtml-emogi icons only
+

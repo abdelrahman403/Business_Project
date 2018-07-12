@@ -1,0 +1,444 @@
+/* ********** start main rules ********** */
+
+* {
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,html {
+	height: 5000px;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #f5f5f5;
+}
+a, a:hover, a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+/* ********** end main rules ********** */
+
+/* ********** start my framework ********** */
+
+.roboto-font {
+	font-family: 'Roboto', sans-serif;
+}
+
+.paragraph {
+	font-size: 15px;
+	color: #999;
+	line-height: 1.8;
+}
+.font-normal {
+	font-weight: normal;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+.bold {
+	font-weight: bold;
+}
+
+/*
+	> center vertically
+*/
+.center-vertical {
+	height: 100%;
+	overflow: hidden;
+}
+.center-vertical:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	width: 1px;
+	vertical-align: middle;
+}
+.center-vertical-content {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+
+/*
+	> title border bottom Components
+*/
+
+.title-border {
+	display: block;
+	padding-bottom: 15px;
+	margin-top: 15px;
+	position: relative;
+	top: 0;
+	left: 0;
+} 
+.title-border:before {
+	content: '';
+	display: inline-block;
+	height: 2px;
+	width: 80px;
+	background-color: #eee;
+	position: absolute;
+	top: 0;
+	left: 39%;
+}
+.title-border:after {
+	content: '';
+	display: inline-block;
+	height: 2px;
+	width: 80px;
+	background-color: #eee;
+	position: absolute;
+	top: 0;
+	left: 54%;
+}
+
+.title-border-long {
+	display: inline-block;
+	height: 2px;
+	width: 80px;
+	background-color: #337ab7;
+	position: absolute;
+    left: 50%;
+    top: 0;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+.title-border-small {
+	display: inline-block;
+	height: 6px;
+	background-color: #337ab7;
+	width: 40px;
+	position: absolute;
+    left: 50%;
+    top: -2px;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.about-us .section-title:hover .title-border-small {
+	width: 80px;
+}
+/*
+@media(max-width: 600px) {
+	.title-border-middle { left: 35%; }
+}
+
+.section-title:hover .title-border-top {
+	width: 90px;
+	left: 0;
+}
+*/
+
+
+/*
+	> Button Components
+*/
+
+.custom-btn {
+	display: inline-block;
+	position: relative;
+	background: transparent;
+	color: #fff;
+	width: 210px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	margin-top: 20px;
+	border: 1px solid #fff;
+	overflow: hidden;
+	font-size: 15px;
+	font-weight: 400;
+}
+.custom-btn:before {
+	content: attr(data-title);
+	position: absolute;
+	top: -105%;
+	left: 0;
+	width: 210px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	background: #fff;
+	color: #333;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.custom-btn:after {
+	content: attr(data-title);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 210px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	background: transparent;
+	color: #fff;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.custom-btn:hover:before {
+	top: 0;
+}
+.custom-btn:hover:after {
+	bottom: -100%;
+}
+
+@media (max-width: 991px) {
+	.custom-btn {
+		width: 180px;
+		height: 48px;
+		line-height: 48px;
+		font-size: 14px;
+	}
+	.custom-btn:before {
+		width: 180px;
+		height: 48px;
+		line-height: 48px;
+	}
+	.custom-btn:after {
+		width: 180px;
+		height: 48px;
+		line-height: 48px;
+	}
+}
+@media (max-width: 600px) {
+	.custom-btn {
+		width: 160px;
+		height: 44px;
+		line-height: 44px;
+		font-size: 13px;
+	}
+	.custom-btn:before {
+		width: 160px;
+		height: 44px;
+		line-height: 44px;
+	}
+	.custom-btn:after {
+		width: 160px;
+		height: 44px;
+		line-height: 44px;
+	}
+}
+
+/*
+	> icon effect
+*/
+
+.icon-effect {
+	display: inline-block;
+	position: relative;
+	background: transparent;
+	color: #fff;
+	width: 210px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	margin-top: 20px;
+	border: 1px solid #fff;
+	overflow: hidden;
+	font-size: 15px;
+	font-weight: 400;
+}
+.icon-effect:before {
+	content: attr(data-title);
+	position: absolute;
+	top: -105%;
+	left: 0;
+	width: 210px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	background: #fff;
+	color: #333;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.icon-effect:after {
+	content: attr(data-title);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 210px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	background: transparent;
+	color: #fff;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+.icon-effect:hover:before {
+	top: 0;
+}
+.icon-effect:hover:after {
+	bottom: -100%;
+}
+
+
+/* ********** end my framework ********** */
+
+
+/* 
+	********* all sectoins **********
+*/
+.section {
+	padding-top: 60px;
+	padding-bottom: 50px;
+}
+.section-header {
+	padding-bottom: 50px;
+}
+.section-header .title-head {
+	font-size: 31px;
+	letter-spacing: .8px;
+}
+
+/*** venobox overriding ***/
+.vbox-close {
+	font-size: 42px;
+	font-weight: bold;
+	top: 10px;
+	right: 60px;
+	height: 55px;
+}
+.vbox-close:hover {
+	color: #9D2E3E;
+}
+
+
+
+/*
+	> overriding custom-btn
+*/
+
+.custom-btn {
+	color: rgba(21, 29, 42, .9);
+	border: 1px solid rgba(21, 29, 42, .6);
+}
+.custom-btn:before {
+	background: #151d2a;
+	color: #fff;
+}
+.custom-btn:after {
+	color: #151d2a;
+}
+
+/* icons components */
+
+.center-btn {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.center-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.center-icon-2 {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/*
+
+.copy a.twitter {
+	width: 44px;
+    height: 44px;
+    display: inline-block;
+    background-color: #f3f3f3;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+.copy .twitter:before {
+    content: "\f243";
+    top: 0;
+    opacity: 1;
+}
+.copy a.twitter i {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    z-index: 20;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -webkit-filter: blur(radius);
+}
+.copy .icon-twitter:before {
+    content: '\f243';
+	position: relative;
+    z-index: 11;
+}
+
+*/
+
+.icon-effect-container {
+	position: relative;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: inline-block;
+	width: 50px;
+	height: 58px;
+	overflow: hidden;
+	font-size: 20px;
+	font-weight: 400;
+	
+}
+.icon-effect-container a { color: #888; }
+
+.icon-effect-container .icon-1:before {
+	content: "\f243";
+	position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	transition: .3s;
+	width: 100%;
+	height: 100%;
+	line-height: 55px;
+	text-align: center;
+	background-color: #1da1f2;
+	color: #fff;
+	opacity: 0;
+}
+
+
+.icon-effect-container .icon-2:before {
+	content: "\f243";
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	transition: .3s;
+	width: 100%;
+	height: 100%;
+	line-height: 55px;
+	text-align: center;
+}
+
+.icon-effect-container:hover .icon-1.ion-social-twitter:before {
+	top: 50%;
+	opacity: 1;
+}
+.icon-effect-container:hover .icon-2.ion-social-twitter:before {
+	top: 150%;
+}
+
+
