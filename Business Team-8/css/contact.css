@@ -1,0 +1,46 @@
+.contact-form .container form .row {
+    width: 100%;
+    margin: 20px 0;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.contact-form .container form .row .field {
+    flex: 1 1;
+    margin: 0 10px;
+}
+
+.contact-form .container form .row .field label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #585858;
+    margin: 20px 0;
+    display: block;
+}
+
+.contact-form .container form .row .field input,
+.contact-form .container form .row .field textarea {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #d4d4d4;
+    resize: none;
+}
+
+.contact-features .row {
+    margin: 0;
+}
+
+a.contact-btn.custom-btn {
+    position: relative;
+    background: #043C77;
+    color: #fff;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, .7);
+    margin: auto;
+}
+
+a.contact-btn.custom-btn:hover {
+    border: 1px solid #043C77;
+}

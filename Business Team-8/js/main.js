@@ -1,6 +1,29 @@
 (function ($, window, document) {
 	'use strict';
 	$(function () {
+
+		var oneTime = true;
+
+		// animation
+		$(window).on('scroll', function () {
+			if ($(this).scrollTop() >= 10120 && oneTime) {
+				anime({
+					targets: '.nav-list li',
+					translateX: 400,
+					delay: anime.stagger(50), // increase delay by 100ms for each elements.
+					easing: 'easeInOutExpo'
+				});
+				oneTime = false;
+			} else if ($(this).scrollTop() < 10120) {
+				anime({
+					targets: '.nav-list li',
+					translateX: -200,
+				});
+				oneTime = true;
+			}
+		});
+
+
 		var $navBtn = $('.navigation .nav-btn'),
 			$navMenu = $('.navigation .nav-menu');
 		//			clicked = false;
@@ -26,9 +49,9 @@
 			}
 
 			if ($(this).scrollTop() > 220) {
-				$('.sticky').css('opacity','1');
+				$('.sticky').css('opacity', '1');
 			} else {
-				$('.sticky').css('opacity','0');
+				$('.sticky').css('opacity', '0');
 			}
 		});
 
@@ -72,12 +95,12 @@
 		var teamSectionOffset;
 		var contentScrollHeight;
 		var teamSectionHeight = $('.our-team').height();
-		
+
 		$(window).on('scroll resize', function () {
 
 			windowHeight = $(window).height();
-		  teamSectionOffset = $('.our-team').offset().top;
-		  contentScrollHeight = $('.our-team').prop('scrollHeight') - windowHeight;
+			teamSectionOffset = $('.our-team').offset().top;
+			contentScrollHeight = $('.our-team').prop('scrollHeight') - windowHeight;
 
 			// fix bug (appearing team-nav while loading site in the center of screen)
 			if ($(this).scrollTop() > teamSectionOffset - 300) {
@@ -230,6 +253,10 @@
 
 		}
 		$('.about-us .title-head').wordRotatePlugin();
+
+
+
+
 
 	});
 }(window.jQuery, window, document));
