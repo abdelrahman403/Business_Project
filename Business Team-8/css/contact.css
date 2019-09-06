@@ -44,3 +44,9 @@ a.contact-btn.custom-btn {
 a.contact-btn.custom-btn:hover {
     border: 1px solid #043C77;
 }
+
+.send-btn {
+    margin: auto;
+    padding: 10px 30px;
+    font-size: 18px;
+}

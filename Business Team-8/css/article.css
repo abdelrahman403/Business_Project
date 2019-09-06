@@ -105,6 +105,8 @@
 
 .article-wrapper .article p {
     margin: 20px 0;
+    color: #555;
+    line-height: 1.8;
 }
 
 .article-wrapper .article p span.first-char {
